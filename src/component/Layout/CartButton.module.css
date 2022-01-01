@@ -1,0 +1,33 @@
+.button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: white;
+  color: #ef9272;
+  padding: 0rem 0.5rem;
+  margin-right: 20px;
+  align-items: center;
+
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+}
+.button:hover,
+.button:active {
+  color: black;
+}
+
+.nlinlk {
+  padding-top: 1%;
+  text-decoration: none;
+}
+
+.pic {
+  width: 4rem;
+  height: 4rem;
+  margin-right: -1%;
+  margin-top: -1%;
+}

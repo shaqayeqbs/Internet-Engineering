@@ -1,0 +1,37 @@
+.container {
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 0%;
+ 
+}
+.newcontainer{
+
+  display: flex;
+  flex-direction: row;
+  place-content: space-between;
+}
+
+
+.slider {
+  padding-top: 9%;
+  margin-top: 0;
+  margin-bottom: 16em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.slider :first-child {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+.slider .image-slide {
+  height: 350px;
+  position: absolute;
+  width:90%;
+  border-radius: 2%;
+}/*# sourceMappingURL=Main.css.map */

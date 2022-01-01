@@ -1,0 +1,18 @@
+.jewelerys h2 {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .jewelerys ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .jewelerys{
+    margin: 0;
+    padding: 0;
+   
+  }

@@ -1,0 +1,49 @@
+.container {
+  margin-bottom: 3rem;
+  height: 28rem;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  display: inline;
+  border-radius: 30px;
+  color: #ef9272;
+  font-size: 1.7rem;
+  padding-bottom: 5rem;
+}
+
+.image {
+  display: flex;
+  width: 15%;
+  overflow: hidden;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  margin-right: 7%;
+  margin-top: -10%;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.description {
+  display: flex;
+  width: 75%;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: black;
+}
+
+h3 {
+  font-size: 1.7rem;
+
+  margin-bottom: 2rem;
+}
+
