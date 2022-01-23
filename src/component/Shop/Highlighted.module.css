@@ -1,39 +1,38 @@
 .container {
-  margin-bottom: 3rem;
-  height: 17rem;
-  padding: 2rem;
-  color: black;
-  
-}
-.underline {
-  text-decoration: none;
-}
-
-.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15%;
+}
+.header {
+  margin-top: 1%;
 }
 
 .price {
   border-radius: 30px;
   color: #ef9272;
   font-size: 1.7rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .image {
   display: flex;
-  width: 5%;
-  overflow: hidden;
+  width: 10%;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
-  margin-right: 7%;
-  margin-top: -10%;
+  margin-top: 5%;
+  margin-right: 10%;
 }
 
 .image img {
   width: 100%;
   object-fit: cover;
+}
+.color {
+  font-size: 30px;
+  margin-top: 2rem;
+}
+
+.title {
+  font-weight: 600;
+  color: #ef9272;
 }

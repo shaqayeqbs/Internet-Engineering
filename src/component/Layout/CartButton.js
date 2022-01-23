@@ -1,43 +1,57 @@
 import classes from "./CartButton.module.css";
-import { useState } from "react";
 import React from "react";
 import MainCart from "./MainCart";
 import { NavLink } from "react-router-dom";
-import icon from "../images/icons8-person-80.png";
+
+
+import { useState, useEffect } from "react";
+
 const CartButton = (props) => {
-  const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
-  const btnClasses = `${classes.button} ${
-    btnIsHighlighted ? classes.bump : ""
-  }`;
+  const [isLogin, setIsLogin] = useState(false);
+  useEffect(() => {
+    const logData = localStorage.getItem("isLogin") === "1";
+    setIsLogin(logData);
+  }, []);
+
+  console.log(isLogin);
   return (
     <section className={classes.container}>
-      <NavLink to="/profile" className={`${btnClasses} ${classes.nlinlk}`}>
-        Profile
-      </NavLink>
+      {isLogin && (
+        <NavLink
+          to="/profile"
+          className={`${classes.button} ${classes.nlinlk}`}
+        >
+          Profile
+        </NavLink>
+      )}
 
-      <NavLink to="/new-jewelery" className={`${btnClasses} ${classes.nlinlk}`}>
-        Add New Jewelery
-      </NavLink>
-      <NavLink to="/earings" className={`${btnClasses} ${classes.nlinlk}`}>
+      {isLogin && (
+        <NavLink
+          to="/new-jewelery"
+          className={`${classes.button} ${classes.nlinlk}`}
+        >
+          Add New Jewelery
+        </NavLink>
+      )}
+      <NavLink to="/earings" className={`${classes.button} ${classes.nlinlk}`}>
         Eearing
       </NavLink>
-      <NavLink to="/Rings" className={`${btnClasses} ${classes.nlinlk}`}>
+      <NavLink to="/Rings" className={`${classes.button} ${classes.nlinlk}`}>
         Ring
       </NavLink>
-      <NavLink to="/necklaces" className={`${btnClasses} ${classes.nlinlk}`}>
+      <NavLink
+        to="/necklaces"
+        className={`${classes.button} ${classes.nlinlk}`}
+      >
         necklaces
       </NavLink>
-      <NavLink to="/bracelet" className={`${btnClasses} ${classes.nlinlk}`}>
+      <NavLink to="/bracelet" className={`${classes.button} ${classes.nlinlk}`}>
         Bracelet
       </NavLink>
 
-      <MainCart onShow={props.onShowCart} />
-      <NavLink to="/Login" className={`${btnClasses} ${classes.pic}`}>
-        <img className={classes.pic} src={icon} />
-      </NavLink>
-      <NavLink to="/" className={`${btnClasses} ${classes.nlinlk}`}>
-        Home
-      </NavLink>
+      {isLogin && <MainCart onShow={props.onShowCart} />}
+      
+      
     </section>
   );
 };
