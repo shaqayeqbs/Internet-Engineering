@@ -1,44 +1,48 @@
 import classes from "./JeweleryForm.module.css";
-import Input from "../UI/input";
-import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-const JeweleryForm = (props) => {
-  const [cartItem, setCartItem] = useState([]);
-  useEffect(() => {
-    const CartItems = localStorage.getItem("CartItems");
-    if (CartItems === null) {
-      localStorage.setItem("CartItems", []);
-    } else {
-      setCartItem(CartItems);
-    }
-  }, []);
+import classes1 from "./input.module.css";
+import { useRef, useState } from "react";
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    setCartItem(cartItem.push(props.jewelry)); // TODO: add to list here please :D
-    console.log(cartItem);
-    localStorage.setItem("CartItems", cartItem);
+const JeweleryForm = (props) => {
+  const [amountIsValid, setAmountIsValid] = useState(true);
+  const amountInputRef = useRef();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const enteredAmount = amountInputRef.current.value;
+    const enteredAmountNumber = +enteredAmount;
+
+    if (
+      enteredAmount.trim().length === 0 ||
+      enteredAmountNumber < 1 ||
+      enteredAmountNumber > 5
+    ) {
+      setAmountIsValid(false);
+      return;
+    }
+
+    props.onAddToCart(enteredAmountNumber);
   };
+
   return (
     <form className={classes.form} onSubmit={submitHandler}>
-      <Input
-        label="Amount"
-        input={{
-          id: "amount_" + props.id,
-          type: "number",
-          min: "1",
-          max: "5",
-          step: "1",
-          defaultValue: "1",
-        }}
+      <label className={classes1.input} htmlFor="Amount">
+        Amount
+      </label>
+      <input
+        ref={amountInputRef}
+        id={`"amount_" + ${props.id}`}
+        type="number"
+        min="1"
+        max="5"
+        step="1"
+        defaultValue="1"
       />
       <div className={classes.container}>
         <button className={classes.button} type="submit">
           Add To Cart
         </button>
-        <NavLink to="/jewelerys/updatejewelry" className={classes.button}>
-          Update
-        </NavLink>
+        {!amountIsValid && <p>Please enter a valid amount (1-5).</p>}
       </div>
     </form>
   );

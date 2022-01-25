@@ -8,40 +8,43 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Profile from "./component/Profile/Profile";
 import UpdateJewelry from "./component/Shop/UpdateJewelry";
+import CartProvider from "./store/CartProvider";
 function App() {
   return (
-    <Layout>
-      <Switch>
-        <Route path="/" exact>
-          <Redirect to="/jewelerys" />
-        </Route>
-        <Route path="/jewelerys" exact>
-          <AllJewelery />
-        </Route>
-        <Route path="/jewelerys/updatejewelry" exact>
-          <UpdateJewelry />
-        </Route>
-        <Route path="/jewelerys/:jeweleryId">
-          <JeweleryDetail />
-        </Route>
-        <Route path="/new-jewelery">
-          <NewJewelery />
-        </Route>
-        <Route path="/Login">
-          <Login />
-        </Route>
-        <Route path="/Sign-Up">
-          <SignUp />
-        </Route>
-        <Route path="/profile">
-          <Profile />
-        </Route>
+    <CartProvider>
+      <Layout>
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/jewelerys" />
+          </Route>
+          <Route path="/jewelerys" exact>
+            <AllJewelery />
+          </Route>
+          <Route path="/jewelerys/updatejewelry" exact>
+            <UpdateJewelry />
+          </Route>
+          <Route path="/jewelerys/:jeweleryId">
+            <JeweleryDetail />
+          </Route>
+          <Route path="/new-jewelery">
+            <NewJewelery />
+          </Route>
+          <Route path="/Login">
+            <Login />
+          </Route>
+          <Route path="/Sign-Up">
+            <SignUp />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
 
-        <Route path="*">
-          <NotFound />
-        </Route>
-      </Switch>
-    </Layout>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Layout>
+    </CartProvider>
   );
 }
 

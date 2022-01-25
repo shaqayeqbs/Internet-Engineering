@@ -1,11 +1,9 @@
 import classes from "./JweleryItem.module.css";
 import Card from "../UI/Card";
-import JeweleryForm from "./JeweleryForm";
 import { NavLink } from "react-router-dom";
 
 const JeweleryItem = (props) => {
-  const { title, price, description, id, image } = props;
-  const addToCartHandler = () => {};
+  const { title, price, image } = props;
 
   return (
     <li>
