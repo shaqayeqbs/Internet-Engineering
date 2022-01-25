@@ -2,18 +2,15 @@ import classes from "./CartButton.module.css";
 import React from "react";
 import MainCart from "./MainCart";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "../../store/auth-context";
 
-
-import { useState, useEffect } from "react";
 
 const CartButton = (props) => {
-  const [isLogin, setIsLogin] = useState(false);
-  useEffect(() => {
-    const logData = localStorage.getItem("isLogin") === "1";
-    setIsLogin(logData);
-  }, []);
 
-  console.log(isLogin);
+  const authCtx = useContext(AuthContext);
+  const isLogin =authCtx.isLoggedIn
+
   return (
     <section className={classes.container}>
       {isLogin && (
@@ -50,8 +47,6 @@ const CartButton = (props) => {
       </NavLink>
 
       {isLogin && <MainCart onShow={props.onShowCart} />}
-      
-      
     </section>
   );
 };

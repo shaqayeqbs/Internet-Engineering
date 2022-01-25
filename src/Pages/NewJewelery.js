@@ -1,4 +1,3 @@
-import classes from "./NewJewelery.module.css";
 import { useHistory } from "react-router";
 import NewJeweleryForm from "../component/Shop/NewJeweleryForm";
 const NewJewelery = () => {

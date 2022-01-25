@@ -12,6 +12,7 @@
   margin-bottom: 2%;
 }
 
+
 .buttons {
   width: auto;
   padding-right: 10%;
@@ -20,4 +21,27 @@
 .bd-navbar {
   padding: 0.75rem 0;
   background-color: #7952b3;
+}
+.width {
+  width: 100%;
+}
+.widthIn{
+  width: 20%;
+}
+.ico {
+  display: flex;
+}
+.pic {
+  width: 70%;
+  margin-left: 5%;
+}
+.logoutIcon {
+  width: 6%;
+  margin-top: 1.5%;
+  margin-left: 1%;
+}
+.noStyleButton {
+  background: white;
+  border: none;
+
 }

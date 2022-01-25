@@ -4,7 +4,6 @@ import Card from "../UI/Card";
 const NewJeweleryForm = (props) => {
   const idInputRef = useRef();
   const titleInputRef = useRef();
-  const descriptionInputRef = useRef();
   const imageInputRef = useRef();
   const priceInputRef = useRef();
   const colorInputRef = useRef();
@@ -18,14 +17,14 @@ const NewJeweleryForm = (props) => {
     const enteredPrice = priceInputRef.current.value;
     const enteredColor = colorInputRef.current.value;
     const enteredGender = genderInputRef.current.value;
-    const enteredDescription = descriptionInputRef.current.value;
 
     const jeweeleryData = {
       id: enteredId,
       title: enteredTitle,
       image: enteredImage,
       price: enteredPrice,
-      description: enteredDescription,
+      color: enteredColor,
+      gender: enteredGender,
     };
     props.onAddJewelery(jeweeleryData);
   };

@@ -33,6 +33,7 @@
   border-radius: 2%;
 } /*# sourceMappingURL=Main.css.map */
 
+
 /*new  changes*/
 
 .navbar-brand {
@@ -56,6 +57,18 @@
 }
 
 .image-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-pink {
+  background-color: #f7c3b2;
+
   width: 100%;
   height: 100%;
   display: flex;

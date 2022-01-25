@@ -3,9 +3,11 @@ import classes from "./MainCart.module.css";
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
 
+
 const MainCart = (props) => {
   const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
   const cartCtx = useContext(CartContext);
+ 
 
   const { items } = cartCtx;
 

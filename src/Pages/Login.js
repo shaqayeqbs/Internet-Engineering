@@ -24,7 +24,7 @@ const Login = () => {
       <div className={classes.container}>
         <img className={classes.image} src={LoginImg} alt="for design" />
         <div className={classes.main}>
-          <h1>Login in to Jewelry</h1>
+          <h1>Login in to000 Jewelry</h1>
           <form className={classes.form} onSubmit={handleFormSubmit}>
             <div className={classes.control}>
               <label htmlFor="email">E-mail</label>
