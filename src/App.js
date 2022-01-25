@@ -4,11 +4,10 @@ import AllJewelery from "./Pages/AllJewelery";
 import NotFound from "./Pages/NotFound";
 import JeweleryDetail from "./Pages/JeweleryDetail";
 import NewJewelery from "./Pages/NewJewelery";
-import Login from "./Pages/Login";
-import SignUp from "./Pages/SignUp";
 import Profile from "./component/Profile/Profile";
 import UpdateJewelry from "./component/Shop/UpdateJewelry";
 import CartProvider from "./store/CartProvider";
+import AuthPage from "./Pages/AuthPage";
 function App() {
   return (
     <CartProvider>
@@ -29,12 +28,10 @@ function App() {
           <Route path="/new-jewelery">
             <NewJewelery />
           </Route>
-          <Route path="/Login">
-            <Login />
+          <Route path="/auth">
+            <AuthPage />
           </Route>
-          <Route path="/Sign-Up">
-            <SignUp />
-          </Route>
+
           <Route path="/profile">
             <Profile />
           </Route>

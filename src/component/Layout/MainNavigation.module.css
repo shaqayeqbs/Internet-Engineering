@@ -23,13 +23,25 @@
   color: black;
 }
 
-.buttons {
-  width: auto;
+.width {
+  width: 100%;
+}
+.widthIn{
+  width: 20%;
 }
 .ico {
   display: flex;
 }
-.ico img {
-  width: 65%;
-  margin-left: 15%;
+.pic {
+  width: 70%;
+  margin-left: 5%;
+}
+.logoutIcon {
+  width: 6%;
+  margin-top: 1.5%;
+  margin-left: 1%;
+}
+.noStyleButton {
+  background: white;
+  border: none;
 }
