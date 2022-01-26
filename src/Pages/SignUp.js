@@ -22,7 +22,7 @@ const SignUp = () => {
               />
             </div>
             <div className={classes.control}>
-              <label htmlFor="email">G-mail</label>
+              <label htmlFor="email">E-mail</label>
               <input type="email" required id="email" placeholder="@mail.com" />
             </div>
             <div className={classes.control}>

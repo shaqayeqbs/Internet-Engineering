@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  place-content: space-between;
+}
+.container h1{
+    margin: 0;
+}
+.image {
+
+  height: 45rem;
+  width: 50%;
+  background-color: aqua;
+}
+.main {
+  text-align: center;
+  width: 50%;
+}
+.form {
+  padding: 3rem;
+}
+
+.control {
+  text-align: left;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.control label {
+  display: block;
+  font-weight: bold;
+  margin: 1rem;
+  border-radius: 12%;
+}
+.control input,
+.control textarea {
+  display: block;
+  font: inherit;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 100%;
+}
+
+.actions {
+  margin-top: 1rem;
+  text-align: center;
+}
+.actions button {
+  text-align: center;
+  margin: -0% 0%;
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: #f1b7a3;
+  color: black;
+  padding: 0.8rem 13.3rem;
+  align-items: left;
+  border-radius: 14px;
+  font-weight: bold;
+
+  margin: 2rem;
+  margin-left: 2.5rem;
+  margin-bottom: 0;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: black;
+  color: #f1b7a3;
+}
+.pink {
+  color: #f1b7a3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Link {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.Link :hover {
+  color: #f1b7a3;
+}
+.pink:hover {
+  color: black;
+}
