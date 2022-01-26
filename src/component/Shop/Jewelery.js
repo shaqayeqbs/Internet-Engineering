@@ -3,9 +3,8 @@ import JeweleryItem from "./JeweleryItem";
 const Jewelery = (props) => {
   return (
     <section className={classes.jewelerys}>
-      <h2>BestSelling</h2>
       <ul>
-        {props.jewelery.map((item) => (
+        {props.Jewelery.map((item) => (
           <JeweleryItem
             key={item.id}
             id={item.id}
@@ -13,6 +12,7 @@ const Jewelery = (props) => {
             image={item.image}
             price={item.price}
             color={props.color}
+            type={props.type}
           />
         ))}
       </ul>

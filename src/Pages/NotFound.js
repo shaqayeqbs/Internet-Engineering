@@ -1,5 +1,7 @@
+import Card from "../component/UI/Card";
+
 const NotFound = () => {
-  return <p>this is NotFound page</p>;
+  return <Card>this is NotFound page</Card>;
 };
 
 export default NotFound;

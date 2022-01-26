@@ -4,13 +4,12 @@ const NewJewelery = () => {
   const history = useHistory();
 
   function addJeweleryHandler(JeweleryData) {
-    fetch("https://jewelery-6fabd-default-rtdb.firebaseio.com/jeweelery.json", {
+    fetch("https://jewelery-6fabd-default-rtdb.firebaseio.com/jewelry.json", {
       method: "POST",
       body: JSON.stringify(JeweleryData),
 
       headers: {
         "Content-Type": "application/json",
-  
       },
     }).then(() => {
       history.replace("/");
@@ -19,7 +18,6 @@ const NewJewelery = () => {
 
   return (
     <section>
-      
       <NewJeweleryForm onAddJewelery={addJeweleryHandler} />
     </section>
   );

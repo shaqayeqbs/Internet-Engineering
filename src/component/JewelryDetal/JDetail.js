@@ -9,8 +9,9 @@ import CartContext from "../../store/cart-context";
 const JDetail = (props) => {
   const params = useParams();
   const cartCtx = useContext(CartContext);
+
   const jewelry = props.Dummy_data.find(
-    (jewelry) => jewelry.id === parseInt(params.jeweleryId)
+    (jewelry) => jewelry.id === params.jeweleryId
   );
 
   if (!jewelry) {

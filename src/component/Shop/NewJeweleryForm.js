@@ -2,39 +2,35 @@ import classes from "./NewJeweleryForm.module.css";
 import { useRef } from "react";
 import Card from "../UI/Card";
 const NewJeweleryForm = (props) => {
-  const idInputRef = useRef();
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const priceInputRef = useRef();
   const colorInputRef = useRef();
   const genderInputRef = useRef();
+  const typeInputRef = useRef();
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const enteredId = idInputRef.current.value;
     const enteredTitle = titleInputRef.current.value;
     const enteredImage = imageInputRef.current.value;
     const enteredPrice = priceInputRef.current.value;
     const enteredColor = colorInputRef.current.value;
     const enteredGender = genderInputRef.current.value;
+    const typeInputRef = genderInputRef.current.value;
 
-    const jeweeleryData = {
-      id: enteredId,
+    const jewelry = {
       title: enteredTitle,
       image: enteredImage,
       price: enteredPrice,
       color: enteredColor,
       gender: enteredGender,
+      type: typeInputRef,
     };
-    props.onAddJewelery(jeweeleryData);
+    props.onAddJewelery(jewelry);
   };
   return (
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
-        <div className={classes.control}>
-          <label htmlFor="id">Jewelery Id</label>
-          <input type="number" required id="id" ref={idInputRef} />
-        </div>
         <div className={classes.control}>
           <label htmlFor="title">Jewelery Title</label>
           <input type="text" required id="title" ref={titleInputRef} />
@@ -92,6 +88,19 @@ const NewJeweleryForm = (props) => {
             <input type="radio" required id="female" ref={genderInputRef} />
             <label>others</label>
             <input type="radio" required id="others" ref={genderInputRef} />
+          </div>
+        </div>
+        <div className={classes.control}>
+          <label htmlFor="Type">Type</label>
+          <div className={classes.radio}>
+            <label>Ring</label>
+            <input type="radio" required id="ring" ref={typeInputRef} />
+            <label>Bracelet</label>
+            <input type="radio" required id="bracelet" ref={typeInputRef} />
+            <label>Nechlace</label>
+            <input type="radio" required id="necklace" ref={typeInputRef} />
+            <label>Earing</label>
+            <input type="radio" required id="earing" ref={typeInputRef} />
           </div>
         </div>
 

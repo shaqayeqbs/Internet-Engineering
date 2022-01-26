@@ -30,14 +30,14 @@ const CartButton = (props) => {
           Add New Jewelery
         </NavLink>
       )}
-      <NavLink to="/earings" className={`${classes.button} ${classes.nlinlk}`}>
+      <NavLink to="/earing" className={`${classes.button} ${classes.nlinlk}`}>
         Eearing
       </NavLink>
-      <NavLink to="/Rings" className={`${classes.button} ${classes.nlinlk}`}>
+      <NavLink to="/ring" className={`${classes.button} ${classes.nlinlk}`}>
         Ring
       </NavLink>
       <NavLink
-        to="/necklaces"
+        to="/necklace"
         className={`${classes.button} ${classes.nlinlk}`}
       >
         necklaces
