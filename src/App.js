@@ -66,6 +66,7 @@ function App() {
             <NewJewelery />
           </Route>
           <Route path="/auth">
+            
             <AuthPage />
           </Route>
           <Route path="/profile">

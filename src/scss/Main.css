@@ -1,11 +1,12 @@
 .container {
-  /* height: 650px; */
+  height: 650px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   padding-bottom: 0%;
 }
+
 .newcontainer {
   display: flex;
   flex-direction: row;
@@ -32,16 +33,119 @@
   border-radius: 2%;
 } /*# sourceMappingURL=Main.css.map */
 
-.bg-pink {
-  background-color: #f7c3b2;
-  width: 100%;
-  display: flex;
-  text-decoration: none;
+
+/*new  changes*/
+
+.navbar-brand {
+  color: #ef9272 !important;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.bg-pink a {
-  text-decoration: none;
-  color: rgb(77, 75, 75);
+.nav-item a {
+  color: #ef9272 !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+
+.appbar {
+  width: 100%;
+  background-color: white !important;
+  color: #ef9272;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+  z-index: 999;
+}
+
+.image-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-pink {
+  background-color: #f7c3b2;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-box img.responsive-image {
+  width: 200px;
+  max-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+}
+
+.jewelery-content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.JeweleryForm_button__3Rm5s {
+  padding: 0.4rem 2rem !important;
+  background-color: #f1b7a3;
+  border-color: #f1b7a3;
+  border-radius: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+  .JeweleryForm_button__3Rm5s {
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: #f1b7a3;
+    color: black;
+    padding: 0.5rem 3rem;
+    align-items: center;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .button-item {
+    padding: 10px;
+    gap: 0.5rem !important;
+    display: grid !important;
+  }
+}
+
+.Layout_main__GXyqj {
+  margin: 4rem auto 0 !important;
+  padding: 20px;
+  width: 100% !important;
+}
+
+.Login_image__2-Pto {
+  height: 45rem;
+  width: 100% !important;
+  background-color: aqua;
+}
+
+.Login_main__-4oKa {
+  text-align: center;
+  width: 100% !important;
+}
+
+.login-form button {
+  text-align: center;
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: #f1b7a3 !important;
+  color: black;
+  border-radius: 14px;
+  font-weight: bold;
 }
 
 .footerbutton {
